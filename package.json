@@ -33,6 +33,7 @@
   "homepage": "https://github.com/NuCivic/cartodb-es6-data-backend",
   "dependencies": {
     "babel-runtime": "^6.0.0",
+    "es2sql": "^1.0.12",
     "react": "^0.13.3"
   },
   "devDependencies": {
