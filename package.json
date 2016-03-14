@@ -1,0 +1,57 @@
+{
+  "name": "cartodb-es6-data-backend",
+  "version": "0.0.1",
+  "description": "Standalone data backend for fetching cartodb data with elastic-search-like syntax",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.production.js",
+    "test": "./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
+    "test_watch": "./node_modules/karma/bin/karma start --auto-watch --no-single-run karma.config.js",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NuCivic/cartodb-es6-data-backend"
+  },
+  "keywords": [
+    "carto",
+    "db",
+    "cartodb",
+    "elastic",
+    "search",
+    "elasticsearch",
+    "elastic-searcg",
+    "backend",
+    "es6"
+  ],
+  "author": "Paul Walker (pjwalker.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NuCivic/cartodb-es6-data-backend"
+  },
+  "homepage": "https://github.com/NuCivic/cartodb-es6-data-backend",
+  "dependencies": {
+    "babel-runtime": "^6.0.0",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-eslint": "^3.1.6",
+    "babel-loader": "^6.0.0",
+    "babel-polyfill": "^6.7.2",
+    "eslint": "^0.21.2",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.3",
+    "karma-coverage": "^0.4.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-spec-reporter": "0.0.20",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.19",
+    "phantomjs-polyfill": "0.0.1",
+    "react-hot-loader": "^1.1.5",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.8.0"
+  }
+}
