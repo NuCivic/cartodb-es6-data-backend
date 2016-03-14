@@ -1,7 +1,5 @@
-import React from 'react';
-import App from './App';
+const Cartodb = {};
 
-React.render(
-  <App />,
-  document.body
-);
+Cartodb.__type__ = "cartodb";
+
+export default Cartodb;

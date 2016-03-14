@@ -1,5 +1,4 @@
 var webpack = require('karma-webpack');
-var karmaAsync = require('karma-jasmine-async');
 
 module.exports = function (config) {
   config.set({
