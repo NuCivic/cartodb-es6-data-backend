@@ -22,10 +22,10 @@ Cartodb.fetch = function (config) {
 			query = encodeURIComponent(Cartodb._getQueryString(query));
 		}
     urlWithQuery = url+query;
+		console.log('00', urlWithQuery);
 		// Do fetch
     fetch(urlWithQuery)
       .then(res => {
-				console.log('11',res.json());
         return res.json();
       })
       .then(data => {
@@ -50,7 +50,7 @@ Cartodb.fetch = function (config) {
 
 
 Cartodb._getUrl = function (config) {
-  return `https://${config.user}.cartodb.com/api/${API_V}/sql?`
+  return `https://${config.user}.cartodb.com/api/${API_V}/sql?q=`
 };
 
 // return the non urlencoded query

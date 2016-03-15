@@ -28,7 +28,7 @@ describe('Make URL', () => {
     };
     const url = Cartodb._getUrl(config);
     expect(typeof url).toBe('string');
-    expect(url).toBe('https://starsinmypockets.cartodb.com/api/v2/sql?');
+    expect(url).toBe('https://starsinmypockets.cartodb.com/api/v2/sql?q=');
   })
 });
 
@@ -49,14 +49,19 @@ describe('Should fetch data', () => {
   let result;
   const config = {
     user: 'starsinmypockets',
-    table: 'public.congressional_districts'
+    table: 'public.congressional_districts_2015'
   }
 
-  beforeEach(() => {
+  beforeEach(done => {
+    console.log('f0');
     Cartodb.fetch(config)
       .then(data => {
         console.log('f', data);
         result = data;
+        done();
+      })
+      .catch(e => {
+        console.log('Fail -',e);
       });
   });
 
