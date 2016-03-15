@@ -32,6 +32,18 @@ describe('Make URL', () => {
   })
 });
 
+describe('Make query', () => {
+  it('Shoud return a query string from obj', () => {
+    let queryObj = {
+      table: 'public.congressional_districts',
+      size: 100,
+      start: 3
+    }
+    let queryString = Cartodb.Es2sql.translate(queryObj);
+    console.log('tra', queryString);
+    expect(typeof queryString).toBe('string');
+  });
+});
 //describe('Should fetch data', () => {
 //  const config = {
 //    user: 'starsinmypockets',

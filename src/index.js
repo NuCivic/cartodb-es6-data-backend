@@ -45,6 +45,10 @@ Cartodb._getUrl = function (config) {
   return `https://${config.user}.cartodb.com/api/${API_V}/sql?`
 };
 
+// return the non urlencoded query
+Cartodb.getQueryString = function (query) {
+  return Es2sql.translate(query);
+};
 
 // exports for testing
 Cartodb.Es2sql = Es2sql;
