@@ -25,7 +25,7 @@
     "backend",
     "es6"
   ],
-  "author": "Paul Walker (pjwalker.net)",
+  "author": "Paul Walker <pjwalker76@gmail.com> (https://github.com/starsinmypockets)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NuCivic/cartodb-es6-data-backend"
