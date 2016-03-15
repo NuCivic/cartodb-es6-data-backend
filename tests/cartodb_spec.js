@@ -40,7 +40,6 @@ describe('Make query', () => {
       start: 3
     }
     let queryString = Cartodb.Es2sql.translate(queryObj);
-    console.log('tra', queryString);
     expect(typeof queryString).toBe('string');
   });
 });
@@ -53,20 +52,14 @@ describe('Should fetch data', () => {
   }
 
   beforeEach(done => {
-    console.log('f0');
     Cartodb.fetch(config)
       .then(data => {
-        console.log('f', data);
         result = data;
         done();
-      })
-      .catch(e => {
-        console.log('Fail -',e);
       });
   });
 
   it('Should return valid data', () => {
-    console.log('r', result);
     expect(typeof result).toBe('object');
   });
 });

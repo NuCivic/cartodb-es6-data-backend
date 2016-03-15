@@ -13,7 +13,6 @@ Cartodb.fetch = function (config) {
       url = config.url;
 			config.user = Cartodb._parseDatasetUrl(config.url);
 			query = config.url.match(/q=(.*)/g);
-			console.log('cdbF0', query);
 		// otherwise create a default query
 		} else {
       url = Cartodb._getUrl(config);
@@ -22,14 +21,12 @@ Cartodb.fetch = function (config) {
 			query = encodeURIComponent(Cartodb._getQueryString(query));
 		}
     urlWithQuery = url+query;
-		console.log('00', urlWithQuery);
 		// Do fetch
     fetch(urlWithQuery)
       .then(res => {
         return res.json();
       })
       .then(data => {
-				console.log('12', data);
         let output;
         let fields = Object.keys(data.fields).map(function(val, i) {
           return {id: val};
@@ -42,7 +39,6 @@ Cartodb.fetch = function (config) {
         resolve(output);
       })
       .catch(e => {
-        console.log('Error fetching cartodb data', e);
         reject(e);
       });
 		});
