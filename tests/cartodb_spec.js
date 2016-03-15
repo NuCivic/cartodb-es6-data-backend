@@ -44,23 +44,24 @@ describe('Make query', () => {
     expect(typeof queryString).toBe('string');
   });
 });
-//describe('Should fetch data', () => {
-//  const config = {
-//    user: 'starsinmypockets',
-//    table: 'public.congressional_districts'
-//  }
-//  let result;
-//
-//  beforeEach(() => {
-//    Cartodb.fetch(config)
-//      .then(data => {
-//        console.log('f', data);
-//        result = data;
-//      });
-//  });
-//
-//  it('Should return valid data', () => {
-//    console.log('r', result);
-//    expect(typeof result).toBe('object');
-//  });
-//});
+
+describe('Should fetch data', () => {
+  let result;
+  const config = {
+    user: 'starsinmypockets',
+    table: 'public.congressional_districts'
+  }
+
+  beforeEach(() => {
+    Cartodb.fetch(config)
+      .then(data => {
+        console.log('f', data);
+        result = data;
+      });
+  });
+
+  it('Should return valid data', () => {
+    console.log('r', result);
+    expect(typeof result).toBe('object');
+  });
+});
