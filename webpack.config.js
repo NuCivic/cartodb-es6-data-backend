@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    filename: 'dist/bundle.js',
+    filename: 'bundle.js',
   },
   devtool: 'eval-source-map',
   plugins: [
