@@ -1,4 +1,4 @@
-import * as Es2sql from 'es2sql';
+import {Es2Sql} from 'es2sql';
 
 const API_V = 'v2';
 let Cartodb = {};

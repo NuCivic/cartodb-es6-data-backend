@@ -4,26 +4,22 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/index.js'
   ],
   output: {
-    library: 'Es2sql',
+    path: path.join(__dirname, 'dist'),
     libraryTarget: 'umd',
     filename: 'dist/bundle.js',
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
   devtool: 'eval-source-map',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
+        test: /\.js$/,
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src')
       }
     ]
