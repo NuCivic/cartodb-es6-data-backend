@@ -2,7 +2,7 @@
   "name": "cartodb-es6-data-backend",
   "version": "0.0.2",
   "description": "Standalone data backend for fetching cartodb data with elastic-search-like syntax",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "node server.js",
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
