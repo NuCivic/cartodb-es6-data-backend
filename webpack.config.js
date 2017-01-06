@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    filename: 'dist/bundle.js',
+    filename: 'bundle.js',
   },
   devtool: 'eval-source-map',
   plugins: [
@@ -19,7 +19,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        },
         include: path.join(__dirname, 'src')
       }
     ]
