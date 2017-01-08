@@ -8,20 +8,19 @@ Cartodb.__type__ = "cartodb";
 Cartodb.fetch = function (config) {
   let query, url, urlWithQuery, sql;
   return new Promise((resolve, reject) => {
-		// parse user and query from url
-		if (config.url) {
-      url = config.url;
-			config.user = Cartodb._parseDatasetUrl(config.url);
-			query = config.url.match(/q=(.*)/g);
-		// otherwise create a default query
-		} else {
-      url = Cartodb._getUrl(config);
-			query = config.query || Cartodb._defaultQuery(config);
-			query.table = config.table;
-			query = encodeURIComponent(Cartodb._getQueryString(query));
-		}
+  	// just use url with full query if supplied
+	if (config.url) {
+		url = config.url;
+		query = "";
+	// otherwise create a default query
+	} else {
+		url = Cartodb._getUrl(config);
+		query = config.query || Cartodb._defaultQuery(config);
+		query.table = config.table;
+		query = encodeURIComponent(Cartodb._getQueryString(query));
+	}
     urlWithQuery = url+query;
-		// Do fetch
+	// Do fetch
     fetch(urlWithQuery)
       .then(res => {
         return res.json();
