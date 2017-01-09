@@ -66,6 +66,10 @@ Cartodb._defaultQuery = function (config) {
 // exports for testing
 Cartodb.Es2sql = Es2sql;
 
+Cartodb.query = function (queryObj,config) {
+	return Cartodb.fetch(config);
+}
+
 // Get usermame fron url
 Cartodb._parseDatasetUrl = function (url) {
   let s = url.replace(/http(s*):\/\//g, '');
