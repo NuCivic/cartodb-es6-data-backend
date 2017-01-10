@@ -51,7 +51,7 @@ Cartodb._getUrl = function (config) {
 
 // return the non urlencoded query
 Cartodb._getQueryString = function (query) {
-  return Es2sql.translate(query);
+  return Es2Sql.translate(query);
 };
 
 Cartodb._defaultQuery = function (config) {
@@ -63,8 +63,14 @@ Cartodb._defaultQuery = function (config) {
   }
 }
 
+// This is required by react-dash Dataset model.
+Cartodb.query = function (queryObj,config) {
+  // QueryObj is found from the config.
+  return Cartodb.fetch(config);
+}
+
 // exports for testing
-Cartodb.Es2sql = Es2sql;
+Cartodb.Es2Sql = Es2Sql;
 
 // Get usermame fron url
 Cartodb._parseDatasetUrl = function (url) {
