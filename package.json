@@ -32,18 +32,15 @@
   },
   "homepage": "https://github.com/NuCivic/cartodb-es6-data-backend",
   "dependencies": {
-    "babel-runtime": "^6.0.0",
-    "es2sql": "^1.0.12",
-    "react": "^0.13.3"
+    "es2sql": "^1.0.12"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.0.0",
+    "babel-core": "^5.4.5",
     "babel-eslint": "^3.1.6",
-    "babel-loader": "^6.0.0",
-    "babel-polyfill": "^6.7.2",
+    "babel-loader": "^5.0.0",
     "eslint": "^0.21.2",
-    "fetch-polyfill": "^0.8.2",
+    "eslint-plugin-react": "^2.3.0",
+    "istanbul-instrumenter-loader": "^0.1.3",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.3",
     "karma-coverage": "^0.4.2",
@@ -51,7 +48,7 @@
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-spec-reporter": "0.0.20",
     "karma-webpack": "^1.7.0",
-    "phantomjs": "^1.9.19",
+    "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
     "react-hot-loader": "^1.1.5",
     "webpack": "^1.10.5",
