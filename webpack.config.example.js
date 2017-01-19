@@ -3,12 +3,10 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/index'
+    './example'
   ],
   output: {
-    library: 'Cartodb',
-    libraryTarget: 'umd',
-    filename: 'dist/bundle.js',
+    filename: 'example-bundle.js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -17,13 +15,13 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
-        },
-        include: path.join(__dirname, 'src')
+        }
       }
     ]
-  }
+  }  
 };
